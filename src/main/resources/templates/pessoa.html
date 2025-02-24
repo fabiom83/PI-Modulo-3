@@ -32,20 +32,20 @@
                 <h5>Consultar Dados de Pessoa</h5>
                 <form id="campoBuscaPessoa">
                     <label for="buscaPessoa" class= "form-label">CPF:</label>                       
-                    <input type="number" id="buscaPessoa" name="buscaPessoa" class="form-control"/>
+                    <input type="text" maxlength="14" id="buscaPessoa" name="buscaPessoa" class="form-control"/>
                     <br/>
-                    <button type="button" class="btn btn-primary">Buscar</button>
+                    <button type="submit" class="btn btn-primary">Buscar</button>
                 </form>
             </div> <!--FIM DIV BUSCA --><br/>
             
             <div class="row" id="divCadastroPessoa">
                 <h5>Cadastrar Pessoa</h5>
-                <form>
+                <form id="formularioCadastrarPessoa">
                     <label for="nomePessoa" class="form-label">Nome:</label>
                     <input type="text" id="nomePessoa" name="nomePessoa" class="form-control"/>
                     
                     <label for="cpfPessoa" class="form-label">CPF:</label>
-                    <input type="number" id="cpfPessoa" name="cpfPessoa" class="form-control"/>
+                    <input type="text" maxlength="14" id="cpfPessoa" name="cpfPessoa" class="form-control" />
                     
                     <label for="enderecoPessoa" class="form-label">Endereço:</label>
                     <input type="text" id="enderecoPessoa" name="enderecoPessoa" class="form-control"/>
@@ -64,12 +64,12 @@
             
             <div class="row" id="divEditarPessoa">
                 <h5>Editar Cadastro de Pessoa</h5>
-                <form>
+                <form id="formularioEditarPessoa">
                     <label for="nomePessoaEditar" class="form-label">Nome:</label>
                     <input type="text" id="nomePessoaEditar" name="nomePessoaEditar" class="form-control"/>
                     
-                    <label for="cpfPessoa" class="form-label">CPF:</label>
-                    <input type="number" id="cpfPessoaEditar" name="cpfPessoaEditar" class="form-control"/>
+                    <label for="cpfPessoaEditar" class="form-label">CPF:</label>
+                    <input type="text" maxlength="14" id="cpfPessoaEditar" name="cpfPessoaEditar" class="form-control"/>
                     
                     <label for="enderecoPessoaEditar" class="form-label">Endereço:</label>
                     <input type="text" id="enderecoPessoaEditar" name="enderecoPessoaEditar" class="form-control"/>
@@ -102,6 +102,6 @@
         </div> <!-- FIM DIV CONTAINER -->
         <script th:src="@{/bootstrap/js/bootstrap.min.js}"></script>
         <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> 
-         <script th:src="@{/js/scripts.js}"></script>
+         <script th:src="@{/js/scriptsPessoa.js}"></script>
     </body>
 </html>

@@ -32,26 +32,26 @@
                 <h5>Consultar Dados do Advogado</h5>
                 <form id="campoBuscaAdvogado">
                     <label for="buscaAdvogado" class= "form-label">CPF:</label>                       
-                    <input type="number" id="buscaAdvogado" name="buscaAdvogado" class="form-control"/>
+                    <input type="text" maxlength="14" id="buscaAdvogado" name="buscaAdvogado" class="form-control"/>
                     <br/>
-                    <button type="button" class="btn btn-primary">Buscar</button>
+                    <button type="submit" class="btn btn-primary">Buscar</button>
                 </form>
             </div> <!--FIM DIV BUSCA --><br/>
             
             <div class="row" id="divCadastroAdvogado">
                 <h5>Cadastrar Advogado</h5>
-                <form>
+                <form id="formularioCadastrarAdvogado">
                     <label for="nomeAdvogado" class="form-label">Nome:</label>
                     <input type="text" id="nomeAdvogado" name="nomeAdvogado" class="form-control"/>
                     
                     <label for="cpfAdvogado" class="form-label">CPF:</label>
-                    <input type="number" id="cpfAdvogado" name="cpfAdvogado" class="form-control"/>
+                    <input type="text" maxlength="14" id="cpfAdvogado" name="cpfAdvogado" class="form-control"/>
                     
                     <label for="nrOab" class="form-label">OAB:</label>
-                    <input type="number" id="nrOab" name="nrOab" class="form-control"/>
+                    <input type="text" id="nrOab" name="nrOab" class="form-control"/>
                     
                     <label for="ufOab" class="form-label">UF da OAB:</label>
-                    <input type="number" id="ufOab" name="ufOab" class="form-control"/>
+                    <input type="text" id="ufOab" name="ufOab" class="form-control"/>
                     <br/>
                     <button type="submit" class="btn btn-success">Cadastrar</button>
                     <button type="button" class="btn btn-secondary">Limpar</button>
@@ -60,18 +60,18 @@
             
             <div class="row" id="divEditarAdvogado">
                 <h5>Editar Cadastro de Advogado</h5>
-                <form>
+                <form id="formularioEditarAdvogado">
                     <label for="nomeAdvogadoEditar" class="form-label">Nome:</label>
                     <input type="text" id="nomeAdvogadoEditar" name="nomeAdvogadoEditar" class="form-control"/>
                     
                     <label for="cpfAdvogadoEditar" class="form-label">CPF:</label>
-                    <input type="number" id="cpfAdvogadoEditar" name="cpfAdvogadoEditar" class="form-control"/>
+                    <input type="text" maxlength="14" id="cpfAdvogadoEditar" name="cpfAdvogadoEditar" class="form-control"/>
                     
                     <label for="nrOabEditar" class="form-label">OAB:</label>
-                    <input type="number" id="nrOabEditar" name="nrOabEditar" class="form-control"/>
+                    <input type="text" id="nrOabEditar" name="nrOabEditar" class="form-control"/>
                     
                     <label for="ufOabEditar" class="form-label">UF da OAB:</label>
-                    <input type="number" id="ufOabEditar" name="ufOabEditar" class="form-control"/>
+                    <input type="text" id="ufOabEditar" name="ufOabEditar" class="form-control"/>
                     <br/>
                     <button type="submit" class="btn btn-primary">Editar</button>
                     <button type="button" class="btn btn-danger">Cancelar</button>
@@ -93,6 +93,6 @@
         </div> <!-- FIM DIV CONTAINER -->
         <script th:src="@{/bootstrap/js/bootstrap.min.js}"></script>
         <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> 
-         <script th:src="@{/js/scripts.js}"></script>
+         <script th:src="@{/js/scriptsAdvogado.js}"></script>
     </body>
 </html>
