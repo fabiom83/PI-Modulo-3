@@ -1,11 +1,17 @@
 
 $(document).ready(function(){
     
+    $('#divDetalharPessoa').hide();
+    $('#divEditarPessoa').hide();
+    
     //VALIDAR CAMPO BUSCA NO PESSOA.HTML
     $('#campoBuscaPessoa').submit(function(event){
         event.preventDefault();
         if($('#buscaPessoa').val() === ''){
             alert("Preencha o Campo para Busca");
+        }
+        else{
+            $('#divDetalharPessoa').show();
         }
     });
     
@@ -82,6 +88,10 @@ $(document).ready(function(){
             let traco = $('#cpfPessoaEditar').val();
             $('#cpfPessoaEditar').val(traco + '-');
         }
+    });
+    
+    $('#botaoEditarPessoa').click(function(){
+        $('#divEditarPessoa').show();
     });
     
 });//FIM DO DOCUMENT READY FUNCTION

@@ -8,25 +8,22 @@
     
     <body>
         <div class="container">
-            <div class="row"> <!-- NAVBAR NO TOPO DA PÁGINA -->
-                <ul class="nav justify-content-end">
+            <div class="row corFundoCinzaEscuro"> <!-- NAVBAR NO TOPO DA PÁGINA -->
+                <ul class="nav nav-underline justify-content-end">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" th:href="@{index}">Página Principal</a>
-                    </li>
-                    
+                        <a class="nav-link active corbranca" aria-current="page" th:href="@{index}"><p class="textoBrancoNav">Página Principal</p></a>
+                    </li>                    
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" th:href="@{processo}">Cadastrar Novo Processo</a>
-                    </li>   
-                    
+                        <a class="nav-link active" aria-current="page" th:href="@{processo}"><p class="textoBrancoNav">Cadastrar Processo</p></a>
+                    </li>                       
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" th:href="@{pessoa}">Pessoas</a>
-                    </li>
-                    
+                        <a class="nav-link active" aria-current="page" th:href="@{pessoa}"><p class="textoBrancoNav">Pessoas</p></a>
+                    </li>                    
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" th:href="@{advogado}">Advogados</a>
+                        <a class="nav-link active" aria-current="page" th:href="@{advogado}"><p class="textoBrancoNav">Advogados</p></a>
                     </li>
                 </ul>
-            </div><!-- FIM NAVBAR NO TOPO DA PÁGINA --><br/>
+            </div><!-- FIM NAVBAR NO TOPO DA PÁGINA -->
             
             <div class="row">
                 <h5>Consultar Dados de Pessoa</h5>
@@ -38,7 +35,7 @@
                 </form>
             </div> <!--FIM DIV BUSCA --><br/>
             
-            <div class="row" id="divCadastroPessoa">
+            <div class="row corFundoAzulClaro" id="divCadastroPessoa">
                 <h5>Cadastrar Pessoa</h5>
                 <form id="formularioCadastrarPessoa">
                     <label for="nomePessoa" class="form-label">Nome:</label>
@@ -71,12 +68,12 @@
                 <p>UF: <span id="ufPessoaDetalhes"></span></p>
                 <br/>
                 <div class="d-grid gap-2 d-md-block">
-                    <button type="button" class="btn btn-outline-info">Editar Dados</button>
+                    <button type="button" id="botaoEditarPessoa" class="btn btn-outline-info">Editar Dados</button>
                 </div>
                 <br/>
             </div><!-- FIM DIV ROW DETALHES --><br/>
             
-            <div class="row" id="divEditarPessoa">
+            <div class="row corFundoAzulClaro" id="divEditarPessoa">
                 <h5>Editar Cadastro de Pessoa</h5>
                 <form id="formularioEditarPessoa">
                     <label for="nomePessoaEditar" class="form-label">Nome:</label>

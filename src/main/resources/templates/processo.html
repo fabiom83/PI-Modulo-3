@@ -8,22 +8,22 @@
     
     <body>
         <div class="container">
-            <div class="row"> <!-- NAVBAR NO TOPO DA PÁGINA -->
-                <ul class="nav justify-content-end">
+            <div class="row corFundoNav"> <!-- NAVBAR NO TOPO DA PÁGINA -->
+                <ul class="nav nav-underline justify-content-end">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" th:href="@{index}">Página Principal</a>
+                        <a class="nav-link active corbranca" aria-current="page" th:href="@{index}"><p class="textoBrancoNav">Página Principal</p></a>
                     </li>                    
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" th:href="@{processo}">Cadastrar Novo Processo</a>
+                        <a class="nav-link active" aria-current="page" th:href="@{processo}"><p class="textoBrancoNav">Cadastrar Processo</p></a>
                     </li>                       
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" th:href="@{pessoa}">Pessoas</a>
+                        <a class="nav-link active" aria-current="page" th:href="@{pessoa}"><p class="textoBrancoNav">Pessoas</p></a>
                     </li>                    
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" th:href="@{advogado}">Advogados</a>
+                        <a class="nav-link active" aria-current="page" th:href="@{advogado}"><p class="textoBrancoNav">Advogados</p></a>
                     </li>
                 </ul>
-            </div> <!-- FIM NAVBAR NO TOPO DA PÁGINA -->
+            </div><!-- FIM NAVBAR NO TOPO DA PÁGINA -->
             
             <div class="row" id="divCadastroProcesso">
                 <h5>Cadastrar Processo</h5>
@@ -35,15 +35,16 @@
                         <button type="submit" class="btn btn-primary">Buscar</button>
                     </form>
                     <br/>
-                    
+                    <div class="corFundoAzulClaro">
                     <form id="formularioBuscarAdvAutor">
                         <label for="cpfAdvAutorBuscar" class="form-label">Informe o CPF do Advogado:</label>
                         <input type="text" maxlength="14" id="cpfAdvAutorBuscar" name="cpfAdvAutorBuscar" class="form-control"/>
                         <button type="submit" class="btn btn-primary">Buscar</button>
                     </form>
                     <br/>
-                    <button type="button" class="btn btn-outline-light">Prosseguir</button>
+                    <button type="button" id="botaoProsseguir1" class="btn btn-light">Prosseguir</button>
                     <br/>
+                    </div>
                 </div><!-- FIM DIV AUTOR --><br/>
                 
                 <div id="divCadastrarReu"><!-- SESSÃO RÉU -->
@@ -54,15 +55,16 @@
                         <button type="submit" class="btn btn-primary">Buscar</button>
                     </form>
                     <br/>
-                    
+                    <div class="corFundoAzulClaro">
                     <form id="formularioBuscarAdvReu">
                         <label for="cpfAdvReuBuscar" class="form-label">Informe o CPF do Advogado:</label>
                         <input type="text" maxlength="14" id="cpfAdvReuBuscar" name="cpfAdvReuBuscar" class="form-control"/>
                         <button type="submit" class="btn btn-primary">Buscar</button>
                     </form>
                     <br/>
-                    <button type="button" class="btn btn-outline-light">Prosseguir</button>
+                    <button type="button" id="botaoProsseguir2" class="btn btn-light">Prosseguir</button>
                     <br/>
+                    </div>
                 </div><!-- FIM DIV RÉU --><br/>
                 
                 <div id="divCadastrarDadosProcesso"> <!-- SESSÃO PROCESSO -->

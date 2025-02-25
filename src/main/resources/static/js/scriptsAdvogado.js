@@ -1,11 +1,17 @@
 
 $(document).ready(function(){
     
-    //VALIDAR CAMPO BUSCA NO PESSOA.HTML
+   $('#divDetalharAdvogado').hide();
+   $('#divEditarAdvogado').hide();
+    
+    //VALIDAR CAMPO BUSCA NO ADVOGADO.HTML
     $('#campoBuscaAdvogado').submit(function(event){
         event.preventDefault();
         if($('#buscaAdvogado').val() === ''){
             alert("Preencha o Campo para Busca");
+        }
+        else{
+            ('#divDetalharAdvogado').show();
         }
     });
     
@@ -80,6 +86,10 @@ $(document).ready(function(){
             let traco = $('#cpfAdvogadoEditar').val();
             $('#cpfAdvogadoEditar').val(traco + '-');
         }
+    });
+    
+    $('#botaoEditarAdvogado').click(function(){
+        $('#divEditarAdvogado').show();
     });
     
 });//FIM DO DOCUMENT READY FUNCTION

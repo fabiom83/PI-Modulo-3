@@ -1,11 +1,17 @@
-.corazul{
-    background-color: blue;
-}
-
-.corverde{
-    background-color: aquamarine;
-}
-
-body{
-    background-color: rgb(250, 250, 250);
+  
+.textoBrancoNav{
+      color:  gainsboro;
+      font-size: large;
+  }
+  
+  .corFundoNav{
+      background-color: #000;
+  }
+  
+  .corFundoCinzaEscuro{
+      background-color: #292829;
+  }
+  
+  .corFundoAzulClaro{
+      background-color: #eaedf5;
   }
