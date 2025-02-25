@@ -11,17 +11,14 @@
             <div class="row"> <!-- NAVBAR NO TOPO DA PÁGINA -->
                 <ul class="nav justify-content-end">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" th:href="@{index}">HOME</a>
-                    </li>
-                    
+                        <a class="nav-link active" aria-current="page" th:href="@{index}">Página Principal</a>
+                    </li>                    
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" th:href="@{processo}">Processos</a>
-                    </li>   
-                    
+                        <a class="nav-link active" aria-current="page" th:href="@{processo}">Cadastrar Novo Processo</a>
+                    </li>                       
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" th:href="@{pessoa}">Pessoas</a>
-                    </li>
-                    
+                    </li>                    
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" th:href="@{advogado}">Advogados</a>
                     </li>
@@ -30,43 +27,45 @@
             
             <div class="row" id="divCadastroProcesso">
                 <h5>Cadastrar Processo</h5>
-                <div id="divCadastrarAutor">
+                <div id="divCadastrarAutor"> <!-- SESSÃO AUTOR -->
                     <h6>Cadastrar Autor</h6>
                     <form id="formularioBuscarAutor">
-                        <label for="cpfAutorBuscar" class="form-label">Informe o CPf do Autor:</label>
-                        <input type="number" id="cpfAutorBuscar" name="cpfAutorBuscar" class="form-control"/>
+                        <label for="cpfAutorBuscar" class="form-label">Informe o CPF do Autor:</label>
+                        <input type="text" maxlength="14" id="cpfAutorBuscar" name="cpfAutorBuscar" class="form-control"/>
                         <button type="submit" class="btn btn-primary">Buscar</button>
                     </form>
                     <br/>
                     
                     <form id="formularioBuscarAdvAutor">
-                        <label for="cpfAdvAutorBuscar" class="form-label">Informe o CPf do Advogado:</label>
-                        <input type="number" id="cpfAdvAutorBuscar" name="cpfAdvAutorBuscar" class="form-control"/>
+                        <label for="cpfAdvAutorBuscar" class="form-label">Informe o CPF do Advogado:</label>
+                        <input type="text" maxlength="14" id="cpfAdvAutorBuscar" name="cpfAdvAutorBuscar" class="form-control"/>
                         <button type="submit" class="btn btn-primary">Buscar</button>
                     </form>
                     <br/>
                     <button type="button" class="btn btn-outline-light">Prosseguir</button>
+                    <br/>
                 </div><!-- FIM DIV AUTOR --><br/>
                 
-                <div id="divCadastrarReu">
+                <div id="divCadastrarReu"><!-- SESSÃO RÉU -->
                     <h6>Cadastrar Réu</h6>
                     <form id="formularioBuscarReu">
-                        <label for="cpfReuBuscar" class="form-label">Informe o CPf do Réu:</label>
-                        <input type="number" id="cpfReuBuscar" name="cpfReuBuscar" class="form-control"/>
+                        <label for="cpfReuBuscar" class="form-label">Informe o CPF do Réu:</label>
+                        <input type="text" maxlength="14" id="cpfReuBuscar" name="cpfReuBuscar" class="form-control"/>
                         <button type="submit" class="btn btn-primary">Buscar</button>
                     </form>
                     <br/>
                     
                     <form id="formularioBuscarAdvReu">
-                        <label for="cpfAdvReuBuscar" class="form-label">Informe o CPf do Advogado:</label>
-                        <input type="number" id="cpfAdvReuBuscar" name="cpfAdvReuBuscar" class="form-control"/>
+                        <label for="cpfAdvReuBuscar" class="form-label">Informe o CPF do Advogado:</label>
+                        <input type="text" maxlength="14" id="cpfAdvReuBuscar" name="cpfAdvReuBuscar" class="form-control"/>
                         <button type="submit" class="btn btn-primary">Buscar</button>
                     </form>
+                    <br/>
                     <button type="button" class="btn btn-outline-light">Prosseguir</button>
                     <br/>
                 </div><!-- FIM DIV RÉU --><br/>
                 
-                <div id="divCadastrarDadosProcesso">
+                <div id="divCadastrarDadosProcesso"> <!-- SESSÃO PROCESSO -->
                     <h6>Dados do Processo</h6>
                     <form id="formularioProcesso">
                         <label for="nrProcesso" class="form-label">Nº do Processo:</label>
@@ -77,43 +76,21 @@
                         
                         <label for="UfVaraTramitacao" class="form-label">UF de Tramitação:</label>
                         <input type="text" id="UfVaraTramitacao" name="UfVaraTramitacao" class="form-control"/>
-                        
+                        <br/>
                         <button type="submit" class="btn btn-success">Cadastrar</button>
                     </form>
                     <br/>
                 </div><!-- FIM DIV DADOS PROCESSO -->               
             </div><!-- FIM DIV ROW CADASTRO --><br/>
-            
-            <div class="row" id="divEditarPessoa">
-                <h5>Editar Processo</h5>
-                <br/>
-                <p>
-                ******  TODO ******
-                </p>
-            </div><!-- FIM DIV ROW EDITAR --><br/>
-            
-            <div class="row" id="divDetalharProcesso">
-                <h5>Dados do Processo</h5>
-                <p>Nº do Processo: <span id="processoDetalhes"></span></p>
-                
-                <p>Autor: <span id="nomeAutorDetalhes"></span></p>
-                <p>Advogado do Autor: <span id="advAutorDetalhes"></span></p>
-                
-                <p>Réu: <span id="nomeReuDetalhes"></span></p>
-                <p>Advogado do Réu: <span id="advReuDetalhes"></span></p>
-                                
-                <p>Vara de Tramitação: <span id="varaTramitacaoDetalhes"></span></p>
-                
-                <p>UF: <span id="ufTramitacaoDetalhes"></span></p>               
-            </div><!-- FIM DIV ROW DETALHES -->
-            
             <div class="row">
-                <button type="button" class="btn btn-warning">Página Inicial</button>
+                <div class="d-grid gap-2 col-3 mx-auto">
+                    <button type="button" class="btn btn-warning">Página Inicial</button>
+                </div>
             </div>
               
         </div> <!-- FIM DIV CONTAINER -->
         <script th:src="@{/bootstrap/js/bootstrap.min.js}"></script>
         <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> 
-         <script th:src="@{/js/scripts.js}"></script>
+         <script th:src="@{/js/scriptsIndexProcesso.js}"></script>
     </body>
 </html>

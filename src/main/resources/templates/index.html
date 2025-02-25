@@ -10,22 +10,19 @@
             <div class="row"> <!-- NAVBAR NO TOPO DA PÁGINA -->
                 <ul class="nav justify-content-end">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" th:href="@{index}">HOME</a>
-                    </li>
-                    
+                        <a class="nav-link active" aria-current="page" th:href="@{index}">Página Principal</a>
+                    </li>                    
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" th:href="@{processo}">Processos</a>
-                    </li>   
-                    
+                        <a class="nav-link active" aria-current="page" th:href="@{processo}">Cadastrar Novo Processo</a>
+                    </li>                       
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" th:href="@{pessoa}">Pessoas</a>
-                    </li>
-                    
+                    </li>                    
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" th:href="@{advogado}">Advogados</a>
                     </li>
                 </ul>
-            </div>
+            </div><!-- FIM NAVBAR NO TOPO DA PÁGINA -->
             
             <div class="row">
                 <div class="col-12 text-center">
@@ -37,7 +34,7 @@
                 <div class="col-sm-2 ">
                     <ul class="nav flex-column text-center">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" th:href="@{processo}">Processos</a>
+                            <a class="nav-link active" aria-current="page" th:href="@{processo}">Cadastrar Novo Processo</a>
                         </li>   
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" th:href="@{pessoa}">Pessoas</a>
@@ -46,7 +43,7 @@
                             <a class="nav-link active" aria-current="page" th:href="@{advogado}">Advogados</a>
                         </li>
                     </ul>
-                </div> <!-- FIM DIV COL NAV -->
+                </div> <!-- FIM DIV COL-SM-2 NAVBAR ESQUERDA -->
                
                 <div class="col-md-9 ">
                     <div class="row">
@@ -54,49 +51,85 @@
                             <label for="buscaProcesso" class= "form-label">Nº Processo:</label>                       
                             <input type="text" id="buscaProcesso" name="buscaProcesso" class="form-control"/>
                             <br/>
-                            <button type="submit" class="btn btn-primary">Buscar</button>
+                            <button type="submit" class="btn btn-primary">Consultar</button>
                         </form>
-                    </div> <!--FIM DIV BUSCA PROCESSO --><br/>
+                    </div> <!--FIM DIV ROW BUSCA PROCESSO --><br/>
                     
-                    <div class="row">
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">First</th>
-                                    <th scope="col">Last</th>
-                                    <th scope="col">Handle</th>
-                                </tr>
-                            </thead>
-                            
-                            <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                </tr>
+                    <div class="row" id="divDetalharProcesso"> <!-- ROW PARA DETALHES DE PROCESSO -->
+                        <h5>Dados do Processo</h5>
+                        <br/>
+                        <p>Nº do Processo: <span id="processoDetalhes"></span></p>
+                        <p>Autor: <span id="nomeAutorDetalhes"></span></p>
+                        <p>Advogado do Autor: <span id="advAutorDetalhes"></span></p>
+                        <p>Réu: <span id="nomeReuDetalhes"></span></p>
+                        <p>Advogado do Réu: <span id="advReuDetalhes"></span></p>
+                        <p>Vara de Tramitação: <span id="varaTramitacaoDetalhes"></span></p>
+                        <p>UF: <span id="ufTramitacaoDetalhes"></span></p>
+                        <div class="d-grid gap-2 d-md-block">
+                            <button type="button" class="btn btn-outline-info">Editar Dados</button>
+                        </div>
+                        <br/>                             
+                    </div> <!-- FIM DIV ROW DETALHES DO PROCESSO --><br/>
+                    
+                    <!-- DIV ROW EDITAR -->
+                    <div class="row" id="divEditarPessoa">
+                        <h5>Editar Processo</h5>
+                        <br/>
+                        <div id="divEditarAutor"> <!-- SESSÃO AUTOR -->
+                            <h6>Cadastrar Autor</h6>
+                            <form id="formularioBuscarAutorEditar">
+                                <label for="cpfAutorBuscarEditar" class="form-label">Informe o CPF do Autor:</label>
+                                <input type="text" maxlength="14" id="cpfAutorBuscarEditar" name="cpfAutorBuscarEditar" class="form-control"/>
+                                <button type="submit" class="btn btn-primary">Buscar</button>
+                            </form>
+                            <br/>
+                            <form id="formularioBuscarAdvAutorEditar">
+                                <label for="cpfAdvAutorBuscarEditar" class="form-label">Informe o CPF do Advogado:</label>
+                                <input type="text" maxlength="14" id="cpfAdvAutorBuscarEditar" name="cpfAdvAutorBuscarEditar" class="form-control"/>
+                                <button type="submit" class="btn btn-primary">Buscar</button>
+                            </form>
+                            <br/>
+                            <button type="button" class="btn btn-outline-light">Prosseguir</button>
+                            <br/>
+                        </div><!-- FIM DIV AUTOR --><br/>
+                        
+                        <div id="divCadastrarReuEditar"><!-- SESSÃO RÉU -->
+                            <h6>Cadastrar Réu</h6>
+                            <form id="formularioBuscarReuEditar">
+                                <label for="cpfReuBuscarEditar" class="form-label">Informe o CPF do Réu:</label>
+                                <input type="text" maxlength="14" id="cpfReuBuscarEditar" name="cpfReuBuscarEditar" class="form-control"/>
+                                <button type="submit" class="btn btn-primary">Buscar</button>
+                            </form>
+                            <br/>
+                            <form id="formularioBuscarAdvReuEditar">
+                                <label for="cpfAdvReuBuscarEditar" class="form-label">Informe o CPF do Advogado:</label>
+                                <input type="text" maxlength="14" id="cpfAdvReuBuscarEditar" name="cpfAdvReuBuscarEditar" class="form-control"/>
+                                <button type="submit" class="btn btn-primary">Buscar</button>
+                            </form>
+                            <br/>
+                            <button type="button" class="btn btn-outline-light">Prosseguir</button>
+                            <br/>
+                        </div><!-- FIM DIV RÉU --><br/>
+                        
+                        <div id="divCadastrarDadosProcessoEditar"> <!-- SESSÃO PROCESSO -->
+                            <h6>Dados do Processo</h6>
+                            <form id="formularioProcessoEditar">
+                                <label for="nrProcessoEditar" class="form-label">Nº do Processo:</label>
+                                <input type="number" id="nrProcessoEditar" name="nrProcessoEditar" class="form-control"/>
                                 
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td>@fat</td>
-                                </tr>
+                                <label for="varaTramitacaoEditar" class="form-label">Vara de Tramitação:</label>
+                                <input type="text" id="varaTramitacaoEditar" name="varaTramitacaoEditar" class="form-control"/>
                                 
-                                <tr>
-                                    <th scope="row">3</th>
-                                    <td colspan="2">Larry the Bird</td>
-                                    <td>@twitter</td>
-                                </tr>
-                            </tbody>
-                        </table>                     
-                    </div> <!-- FIM DIV ROW TABLE -->                   
-                </div> <!-- FIM DIV COL FORM E TABLE -->
-                
-            </div><!-- FIM DIV ROW PRINCIPAL -->
-       
-            
+                                <label for="UfVaraTramitacaoEditar" class="form-label">UF de Tramitação:</label>
+                                <input type="text" id="UfVaraTramitacaoEditar" name="UfVaraTramitacaoEditar" class="form-control"/>
+                                <br/>
+                                <button type="submit" class="btn btn-success">Editar Dados</button>
+                            </form>
+                            <br/>
+                        </div><!-- FIM DIV DADOS PROCESSO -->
+                    </div><!-- FIM DIV ROW EDITAR --><br/>                   
+                </div> <!-- FIM DIV COL-9 COM FORM BUSCA, DETALHES PROCESSO E EDITAR PROCESSO -->                
+            </div><!-- FIM DIV ROW COM NAVBAR ESQUERDA, FORM BUSCA, DETALHES PROCESSO E EDITAR PROCESSO -->           
         </div> <!-- FIM DIV CONTAINER -->
         
         <script th:src="@{/bootstrap/js/bootstrap.min.js}"></script>

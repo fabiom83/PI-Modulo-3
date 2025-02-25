@@ -22,4 +22,9 @@ public class MiscController {
     public String getPaginaProcesso(){
         return "processo";
     }
+    
+    @RequestMapping("/index")
+    public String getPaginaIndex(){
+        return "index";
+    }
 }

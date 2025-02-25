@@ -11,11 +11,11 @@
             <div class="row"> <!-- NAVBAR NO TOPO DA PÁGINA -->
                 <ul class="nav justify-content-end">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" th:href="@{index}">HOME</a>
+                        <a class="nav-link active" aria-current="page" th:href="@{index}">Página Principal</a>
                     </li>
                     
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" th:href="@{processo}">Processos</a>
+                        <a class="nav-link active" aria-current="page" th:href="@{processo}">Cadastrar Novo Processo</a>
                     </li>   
                     
                     <li class="nav-item">
@@ -58,6 +58,19 @@
                 </form>
             </div><!-- FIM DIV ROW CADASTRO --><br/>
             
+            <div class="row" id="divDetalharAdvogado">
+                <h5>Dados do Advogado</h5>
+                <p>Nome: <span id="nomeAdvogadoDetalhes"></span></p>
+                <p>CPF: <span id="cpfAdvogadoDetalhes"></span></p>
+                <p>OAB: <span id="nrOabDetalhes"></span></p>
+                <p>UF da OAB: <span id="ufOabDetalhes"></span></p>
+                <br/>
+                <div class="d-grid gap-2 d-md-block">
+                    <button type="button" class="btn btn-outline-info">Editar Dados</button>
+                </div>
+                <br/>
+            </div><!-- FIM DIV ROW DETALHES --><br/>
+            
             <div class="row" id="divEditarAdvogado">
                 <h5>Editar Cadastro de Advogado</h5>
                 <form id="formularioEditarAdvogado">
@@ -77,17 +90,12 @@
                     <button type="button" class="btn btn-danger">Cancelar</button>
                 </form>
             </div><!-- FIM DIV ROW EDITAR --><br/>
-            
-            <div class="row" id="divDetalharAdvogado">
-                <h5>Dados do Advogado</h5>
-                <p>Nome: <span id="nomeAdvogadoDetalhes"></span></p>
-                <p>CPF: <span id="cpfAdvogadoDetalhes"></span></p>
-                <p>OAB: <span id="nrOabDetalhes"></span></p>
-                <p>UF da OAB: <span id="ufOabDetalhes"></span></p>
-            </div><!-- FIM DIV ROW DETALHES --><br/>
+              
             
             <div class="row">
-                <button type="button" class="btn btn-warning">Página Inicial</button>
+                <div class="d-grid gap-2 col-3 mx-auto">
+                    <button type="button" class="btn btn-warning">Página Inicial</button>
+                </div>
             </div>
               
         </div> <!-- FIM DIV CONTAINER -->

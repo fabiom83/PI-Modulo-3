@@ -11,11 +11,11 @@
             <div class="row"> <!-- NAVBAR NO TOPO DA PÁGINA -->
                 <ul class="nav justify-content-end">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" th:href="@{index}">HOME</a>
+                        <a class="nav-link active" aria-current="page" th:href="@{index}">Página Principal</a>
                     </li>
                     
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" th:href="@{processo}">Processos</a>
+                        <a class="nav-link active" aria-current="page" th:href="@{processo}">Cadastrar Novo Processo</a>
                     </li>   
                     
                     <li class="nav-item">
@@ -62,6 +62,20 @@
                 </form>
             </div><!-- FIM DIV ROW CADASTRO --><br/>
             
+            <div class="row" id="divDetalharPessoa">
+                <h5>Dados da Pessoa</h5>
+                <p>Nome: <span id="nomePessoaDetalhes"></span></p>
+                <p>CPF: <span id="cpfPessoaDetalhes"></span></p>
+                <p>Endereço: <span id="enderecoPessoaDetalhes"></span></p>
+                <p>Cidade: <span id="cidadePessoaDetalhes"></span></p>
+                <p>UF: <span id="ufPessoaDetalhes"></span></p>
+                <br/>
+                <div class="d-grid gap-2 d-md-block">
+                    <button type="button" class="btn btn-outline-info">Editar Dados</button>
+                </div>
+                <br/>
+            </div><!-- FIM DIV ROW DETALHES --><br/>
+            
             <div class="row" id="divEditarPessoa">
                 <h5>Editar Cadastro de Pessoa</h5>
                 <form id="formularioEditarPessoa">
@@ -86,17 +100,11 @@
                 </form>
             </div><!-- FIM DIV ROW EDITAR --><br/>
             
-            <div class="row" id="divDetalharPessoa">
-                <h5>Dados da Pessoa</h5>
-                <p>Nome: <span id="nomePessoaDetalhes"></span></p>
-                <p>CPF: <span id="cpfPessoaDetalhes"></span></p>
-                <p>Endereço: <span id="enderecoPessoaDetalhes"></span></p>
-                <p>Cidade: <span id="cidadePessoaDetalhes"></span></p>
-                <p>UF: <span id="ufPessoaDetalhes"></span></p>               
-            </div><!-- FIM DIV ROW DETALHES -->
-            
+                      
             <div class="row">
-                <button type="button" class="btn btn-warning">Página Inicial</button>
+                <div class="d-grid gap-2 col-3 mx-auto">
+                    <button type="button" class="btn btn-warning">Página Inicial</button>
+                </div>
             </div>
               
         </div> <!-- FIM DIV CONTAINER -->
